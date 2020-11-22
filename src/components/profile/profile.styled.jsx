@@ -1,13 +1,12 @@
 import styled from "styled-components";
-// import { colors } from "../../../styles/theme"
-const mq = "@media (max-width:600px)";
+import { colors, smallMedia } from "utils/theme"
 
 export const StyledComponent = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
     flex-wrap: wrap;
+    padding: 2rem;
     img {
         width: 240px;
         border: 1px solid #ccc;
@@ -32,18 +31,13 @@ export const StyledComponent = styled.div`
       }
     }
     /* MEDIA QUERY */
-    ${mq} {
-      padding: 2rem;
-      img {
-        width: 80%;
-        margin: 0;
-      }
+    ${smallMedia} {
+      padding: 12px;
       .profile {
         width: 100%;
         padding: 0;
         border: none;
         border-radius: 0;
-        margin-top:2rem;
       }
     }
 `;

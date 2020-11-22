@@ -1,20 +1,10 @@
 import { StyledComponent } from "./profile.styled"
 import Image from "next/Image"
 
-/**
- * ProfileBoxの種類
- * title
- * 各所にtext
- * list
- * image
- * iframe
- */
-
-
-export default () => {
+export const Profile = () => {
     return (
         <StyledComponent>
-            <Image src="/profile.png" width="200" height="200" />
+            <Image src="/profile.png" width={300} height={300} />
             <div className="profile">
                 <h2>Profile</h2>
                 <p>名前：小林 信之（こばやし のぶゆき）</p>

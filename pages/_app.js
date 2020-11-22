@@ -1,15 +1,18 @@
 import 'styles/reset.css'
 import 'styles/globals.css'
-import Header from 'templates/header'
+import Head from "next/head"
 import Footer from 'templates/footer'
+import { Layout } from 'templates/layout'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <Header />
+    <Layout>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <title>Knob's Lab</title>
+      </Head>
       <Component {...pageProps} />
-      <Footer />
-    </>
+    </Layout>
   )
 }
 

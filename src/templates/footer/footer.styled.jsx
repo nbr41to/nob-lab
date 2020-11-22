@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "utils/theme"
+import { colors, smallMedia } from "utils/theme"
 
 const mq = "@media (max-width:600px)";
 export const StyledComponent = styled.footer`
@@ -9,9 +9,10 @@ export const StyledComponent = styled.footer`
     background-color: navy;
     padding: 1rem 0;
     width: 100%;
-    position: relative;
-      bottom: 0;
-      left: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
     small {
       font-size: 1.4rem;
       color: white;
@@ -24,7 +25,12 @@ export const StyledComponent = styled.footer`
         font-size: 2.2rem;
       }
     }
-    ${mq} {
-      background-color: ${colors.blue};
+
+    ${smallMedia}{
+      background-color: ${colors.orange};
+      position: relative;
+      small, .btn{
+        color: black;
+      }
     }
   `;
