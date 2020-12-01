@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, smallMedia } from "utils/theme"
+// import { colors, smallMedia } from "utils/theme"
 const mq = "@media (max-width:600px)";
 
 export const StyledComponent = styled.header`
