@@ -29,36 +29,36 @@ export const contents = [
     {
         title: 'About',
         icon: <Face className="icon" />,
-        path: "about",
+        path: "contents/about",
     },
     {
         title: 'Business',
         icon: <LaptopChromebook className="icon" />,
-        path: "business",
+        path: "contents/business",
     },
     {
         title: 'Contact',
         icon: <MailOutline className="icon" />,
-        path: "contact",
+        path: "contents/contact",
     },
     {
         title: 'Document',
         icon: <MenuBook className="icon" />,
-        path: "document",
+        path: "contents/document",
     },
     {
         title: 'Experiment',
         icon: <Code className="icon" />,
-        path: "experiment",
+        path: "contents/experiment",
     },
     {
         title: 'Favorite',
         icon: <Star className="icon" />,
-        path: "favorite",
+        path: "contents/favorite",
     },
     {
         title: 'Gallery',
         icon: <ViewModule className="icon" />,
-        path: "gallery",
+        path: "contents/gallery",
     },
 ]

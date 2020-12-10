@@ -17,8 +17,7 @@ export const StyledComponent = styled.header`
   left: 0;
   right: 0;
   z-index: 10;
-  .logo_box {
-    display: flex;
-    align-items: center;
+  :hover {
+    cursor: pointer;
   }
 `
