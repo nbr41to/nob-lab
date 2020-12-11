@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { smallMedia } from 'utils/theme'
+// import { smallMedia } from 'utils/theme'
+const smallMedia = "@media (max-width:760px)";
 
 export const Styled = styled.button`
   display: none;
