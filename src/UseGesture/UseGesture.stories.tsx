@@ -1,9 +1,8 @@
 import React from 'react';
-
-import { Sample } from '.';
+import { TestUseGesture } from '.';
 
 export default {
   title: 'React Use Gesture',
 }
 
-export const firstComp = () => <Sample />;
+export const firstComp = () => <TestUseGesture />;
