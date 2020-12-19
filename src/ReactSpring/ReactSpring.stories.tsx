@@ -1,9 +1,19 @@
 import React from 'react';
 
-import { Sample } from '.';
+import { FadeIn } from '.';
+import { DragList } from '.';
 
 export default {
   title: 'react-spring',
 }
 
-export const firstComp = () => <Sample />;
+const items = 'Lorem ipsum dolor sit'.split(' ')
+
+export const samplePage = () => {
+  return (
+    <>
+      <FadeIn />
+      <DragList items={items} />
+    </>
+  )
+}

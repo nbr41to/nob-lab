@@ -5,4 +5,4 @@ export default {
   title: 'React Use Gesture',
 }
 
-export const firstComp = () => <TestUseGesture />;
+export const samplePage = () => <TestUseGesture />;

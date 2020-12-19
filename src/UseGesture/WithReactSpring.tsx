@@ -4,50 +4,34 @@ import { useDrag } from 'react-use-gesture'
 import styled from "styled-components"
 
 export const WithReactSpring = () => {
-  const [x, setX] = React.useState(0)
-  const [props, set] = useSpring(() => ({ x: 0 }))
+  const [props, set] = useSpring(() => ({ left: 0 }))
   const bind = useDrag(({ down, movement: [mx, my] }) => {
     // down: 持って動かすとTRUE
     console.log(props)
     // set({ x: down ? mx : 0 })
-
     if (!down) {
-      // if (mx < 50) {
-      //   // hideNavMenu()
-      //   setTimeout(function () {
-      //     set({ x: 50 })
-      //     setX(50)
-      //   }, 1000)
-      // } else {
-      //   set({ x: -50 })
-      //   setX(-50)
-      // }
-      set({ x: 0 })
+      if (mx > 50) {
+        set({ right: 0 })
+      } else {
+        set({ left: 0 })
+      }
     } else {
-      setX(mx)
-      set({ x: x })
+      set({ left: mx })
     }
   })
   return (
-    <div className="box">
-      <animated.div
+    <div className="box" style={{ width: "100%" }}>
+      <StyledBox
         {...bind()}
-        // className="box"
-        style={
-          props
-          // x: -x > 0 ? x : 0,
-          // width: "300px",
-        }
+        style={props}
       >
-        <StyledBox>
-          x: {x}
-        </StyledBox>
-      </animated.div>
+        x
+      </StyledBox>
     </div>
   )
 }
 
-const StyledBox = styled.div`
+const StyledBox = styled(animated.div)`
   width: 100px;
   height: 100px;
   display: flex;
@@ -58,4 +42,7 @@ const StyledBox = styled.div`
   :hover {
     cursor: pointer;
   }
+  position: relative;
+  top: 0;
+  left: 0;
 `
