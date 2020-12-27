@@ -6,6 +6,12 @@ module.exports = {
     '../src/**/*.stories.jsx',
     '../src/**/*.stories.tsx',
   ],  // どのstoryファイルを読み込むのか
+
+  addons: [
+    '@storybook/addon-knobs',
+    '@storybook/addon-links',
+  ],
+
   webpackFinal: async (config) => {
     config.module.rules = [
       // デフォルトのrulesに入っているCSS用の設定が悪さをするのでお帰りいただく
