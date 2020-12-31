@@ -58,3 +58,16 @@ a {
 	color: blue;
 	text-decoration: underline;
 }
+
+code {
+	font-size: 14px;
+	color: tomato;
+	background-color: #444;
+	padding: 6px 10px;
+	border-radius: 4px;
+}
+
+code::after,
+code::before {
+	content: '`';
+}

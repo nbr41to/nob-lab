@@ -1,5 +1,31 @@
 import React from 'react'
 import Head from "next/head"
+import styled from "styled-components"
+
+const MdxBaseStyle = styled.div`
+  h1 {
+    font-size: 3.0rem;
+  }
+  h2 {
+    font-size: 2.4rem;
+  }
+  h3 {
+    font-size: 2.0rem;
+  }
+  a {
+    
+  }
+  code {
+    font-size: 12px;
+    color: tomato;
+    background-color: #444;
+    padding: 8px 12px;
+    border-radius: 4px;
+    &:before ,&:after {
+      content: '｀';
+    }
+  }
+`
 
 export default ({ meta, children }) => {
   return (
@@ -27,23 +53,30 @@ export default ({ meta, children }) => {
           />
         )} */}
       </Head>
-      <div>
+      <MdxBaseStyle>
         {children}
-      </div>
+      </MdxBaseStyle>
       <style jsx>{`
-        h1 {
-          font-size: 3.0rem;
-        }
-        h2 {
-          font-size: 2.4rem;
-        }
-        h3 {
-          font-size: 2.0rem;
-        }
-        a {
-          
-        }
-    `}</style>
+h1 {
+  font - size: 3.0rem;
+}
+h2 {
+  font - size: 2.4rem;
+}
+h3 {
+  font - size: 2.0rem;
+}
+a {
+
+}
+code {
+  font - size: 12px;
+  color: tomato;
+  background - color: #444;
+  padding: 8px 12px;
+  border - radius: 4px;
+}
+`}</style>
     </>
   )
 }
