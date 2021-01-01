@@ -1,9 +1,18 @@
-import
+import { format } from 'date-fns';
+import MdxBaseStyles from 'styles/MdxBaseStyles';
 
-# react-spring
+# date-fns
 
 [date-fns](https://www.npmjs.com/package/date-fns)
 
 ## 実機
 
+`format(new Date(), 'yyyy/MM/dd HH:mm:ss')`
+
+<p>結果：{format(new Date(), 'yyyy/MM/dd HH:mm:ss')}</p>
+
+大文字は非対応という...
+
 ## 参考
+
+export default ({ children }) => <MdxBaseStyles>{children}</MdxBaseStyles>;

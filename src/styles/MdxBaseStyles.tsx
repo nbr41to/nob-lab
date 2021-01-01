@@ -22,7 +22,7 @@ const MdxBaseStyle = styled.div`
     padding: 8px 12px;
     border-radius: 4px;
     &:before ,&:after {
-      content: '｀';
+      content: '\`';
     }
   }
 `

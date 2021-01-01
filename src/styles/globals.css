@@ -59,7 +59,7 @@ a {
 	text-decoration: underline;
 }
 
-code {
+/* code {
 	font-size: 14px;
 	color: tomato;
 	background-color: #444;
@@ -70,4 +70,4 @@ code {
 code::after,
 code::before {
 	content: '`';
-}
+} */
